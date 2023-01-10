@@ -4,11 +4,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Practice3_from7_to13 {
+public class Practice3_from7_to10 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("練習問題3-7");
-		System.out.print("試験の点数を入力");
+		System.out.print("試験の点数を入力:");
 		int score = Integer.parseInt(br.readLine());
 		System.out.print("ケース1:");
 		if(score>=60) {
@@ -51,12 +51,31 @@ public class Practice3_from7_to13 {
 		int day = Integer.parseInt(br.readLine());
 		System.out.print("時間帯の入力(0=午前、1=午後、2=夜間):");
 		int time = Integer.parseInt(br.readLine());
-		if(day==0 || (day==2&&time==0) || (day==3&&time==2) || (day==5&&time!=0)) {
+		if(day==0 || (day==2&&time==0) || (day==3&&time==2) || (day==5&&time==0) || (day==6&&time!=0)) {
 			System.out.println("休診");
 		}else {
-			System.err.println("開いている");
+			System.out.println("開いている");
 		}
 		
-		System.out.println("終わり");
+		System.out.println("練習問題3-10");
+		System.out.print("xを入力：");
+		int x = Integer.parseInt(br.readLine());
+		System.out.print("yを入力：");
+		int y = Integer.parseInt(br.readLine());
+		if (x<y && x%2==0 && y%2==0) {
+			System.out.println("xはyより小さく、かつ、xとyは共に偶数である。");
+		}
+		if (x==y && x<0) {
+			System.out.println("xとyは等しく、かつ、負の数である。");
+		}
+		if (x<y || x%2==0) {
+			System.out.println("xはyより小さい、または、xは偶数である。");
+		}
+		if((x<=10 || x>=100) && (y>=10 && y<=100)) {
+			System.out.println("xは10以下または100以上で、かつ、yは10以上かつ100以下である。");
+		}
+		if(!(x<0 && y<0)) {
+			System.out.println("xもyも負の数である、ではない。");
+		}
 	}
 }
