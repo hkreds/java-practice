@@ -1,6 +1,7 @@
 package java_practice;
 
 public class CoinCase {
+	//練習問題7-5
 	private int[] Counts = new int[6];
 	public void AddCoins(int kind, int count) {
 		if(kind==500) {
@@ -37,6 +38,7 @@ public class CoinCase {
 	public int GetAmount() {
 		return (500*Counts[0])+(100*Counts[1])+(50*Counts[2])+(10*Counts[3])+(5*Counts[4])+(1*Counts[5]);
 	}
+	//練習問題7-6
 	public int AllGetCount() {
 		return Counts[0]+Counts[1]+Counts[2]+Counts[3]+Counts[4]+Counts[5];
 	}
