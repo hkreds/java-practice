@@ -9,9 +9,7 @@ public class MyCar extends AbstractAutomobile {
 	public int getCapacity() {
 		return 7;
 	}
-
 	
-
 	@Override
 	public String getCarModel() {
 		return "自家用ワンボックス車";
