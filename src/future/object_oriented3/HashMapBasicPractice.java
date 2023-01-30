@@ -7,16 +7,25 @@ import java.util.HashMap;
 
 public class HashMapBasicPractice {
 	public static void main(String[] args) throws IOException {
-		HashMap<String, Integer> todou = new HashMap<String, Integer>();
+		HashMap<String, Integer> rankMap = new HashMap<String, Integer>();
+		rankMap.put("東京都", 1);
+		rankMap.put("神奈川県", 2);
+		rankMap.put("大阪府", 3);
+		rankMap.put("愛知県", 4);
+		rankMap.put("埼玉県", 5);
+		rankMap.put("千葉県", 6);
+		rankMap.put("兵庫県", 7);
+		rankMap.put("北海道", 8);
+		rankMap.put("福岡県", 9);
+		rankMap.put("静岡県", 10);
 		System.out.println("人口の多い都道府県ベスト10を当ててください！");
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		todou.put("東京都", 1);
-		while(todou.size()>0) {
+		while(rankMap.size()>0) {
 			String input = br.readLine();
-			if(todou.containsKey(input)) {
+			if(rankMap.containsKey(input)) {
 				System.out.println("正解！");
-				System.out.println(input+"は"+todou.get(input)+"位です");
-				todou.remove(input);
+				System.out.println(input+"は"+rankMap.get(input)+"位です");
+				rankMap.remove(input);
 			}else {
 				System.out.println("残念・・・");
 				System.out.println(input+"はランキングに入っていません・・・");
@@ -24,7 +33,7 @@ public class HashMapBasicPractice {
 				break;
 			}
 		}
-		if(todou.size()==0) {
+		if(rankMap.size()==0) {
 			System.out.println("おめでとうございます！");
 			System.out.println("ベスト10をすべて答えました！");
 		}
